@@ -246,7 +246,7 @@ void LLSparseMatrix::subtract(LLSparseMatrix* other)                            
 				if (q) {
 					if (!p) {
 						q->u.data.val = q->u.data.val * -1;
-						addTerm(q->u.data.row, q->u.data.col, q->u.data.val);
+						addTerm(q->u.data.row, q->u.data.col, (-1 * q->u.data.val));
 					}
 					else
 						p->u.data.val = p->u.data.val - q->u.data.val;
